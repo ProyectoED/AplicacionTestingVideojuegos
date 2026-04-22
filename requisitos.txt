@@ -1,0 +1,11 @@
+========== REQUISITOS FUNCIONALES ==========
+1. Permitir a los desarrolladores de los juegos subir una previsualización/demo a nuestra plataforma
+2. Almacenar estadisticas utiles para desarrolladores. Ej: tiempo jugado, esquema de controles utilizado, etc.
+3. Implementar elección aleatoria de los juegos subidos a la plataforma.
+4. 
+
+========== REQUISITOS NO FUNCIONALES ==========
+1. Diferentes interfaces para usuarios "normales" y usuarios "desarrollador".
+2. Apartado de comentarios al terminar de probar cada juego, pudiendo dar feedback a los desarrolladores.
+3. White/Blacklist de géneros de videojuegos para usuarios.
+4. 
