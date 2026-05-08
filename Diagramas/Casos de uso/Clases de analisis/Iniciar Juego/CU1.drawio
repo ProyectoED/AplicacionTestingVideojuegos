@@ -1,0 +1,104 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="hhJY7u2xIKD7DP4ntpIs">
+    <mxGraphModel dx="945" dy="1057" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="dn8VtfOBq-yE3o-crRei-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Jugador" vertex="1">
+          <mxGeometry height="70" width="40" x="52" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-2" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" target="dn8VtfOBq-yE3o-crRei-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="92" y="300" as="sourcePoint" />
+            <mxPoint x="152" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-3" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Menú&lt;div&gt;principal&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="100" x="162" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-4" edge="1" parent="1" source="dn8VtfOBq-yE3o-crRei-3" style="endArrow=none;html=1;rounded=0;" target="dn8VtfOBq-yE3o-crRei-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="272" y="299.5" as="sourcePoint" />
+            <mxPoint x="332" y="299.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-5" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Gestión&lt;div&gt;juegos&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="70" x="342" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-6" edge="1" parent="1" source="dn8VtfOBq-yE3o-crRei-5" style="endArrow=none;html=1;rounded=0;" target="dn8VtfOBq-yE3o-crRei-7" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="425.5" y="299.5" as="sourcePoint" />
+            <mxPoint x="485.5" y="299.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-7" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Juegos" vertex="1">
+          <mxGeometry height="80" width="80" x="488" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-8" edge="1" parent="1" source="dn8VtfOBq-yE3o-crRei-5" style="endArrow=none;html=1;rounded=0;exitX=0.612;exitY=0.983;exitDx=0;exitDy=0;entryX=0.043;entryY=0.513;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" target="dn8VtfOBq-yE3o-crRei-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="582" y="299.5" as="sourcePoint" />
+            <mxPoint x="642" y="299.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-9" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Estadisticas juego" vertex="1">
+          <mxGeometry height="80" width="80" x="673" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-10" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Grabar datos" vertex="1">
+          <mxGeometry height="80" width="70" x="393.5" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-11" edge="1" parent="1" source="dn8VtfOBq-yE3o-crRei-13" style="endArrow=none;html=1;rounded=0;" target="dn8VtfOBq-yE3o-crRei-10" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="612" y="380" as="sourcePoint" />
+            <mxPoint x="632" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-12" edge="1" parent="1" source="dn8VtfOBq-yE3o-crRei-10" style="endArrow=none;html=1;rounded=0;exitX=0.789;exitY=0.87;exitDx=0;exitDy=0;exitPerimeter=0;" target="dn8VtfOBq-yE3o-crRei-9" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="652" y="440" as="sourcePoint" />
+            <mxPoint x="762" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-13" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Estadisticas jugador" vertex="1">
+          <mxGeometry height="80" width="80" x="673" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CASO DE USO: Iniciar juego como jugador" vertex="1">
+          <mxGeometry height="50" width="120" x="343" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-15" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="1.seleccionarJuego">
+          <mxGeometry relative="1" width="80" x="0.2453" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="303" y="290" />
+            </Array>
+            <mxPoint x="293" y="290" as="sourcePoint" />
+            <mxPoint x="327" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-16" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="2.busqAleat">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="423" y="290" as="sourcePoint" />
+            <mxPoint x="476" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-17" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="3. grabarDatos">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="363" y="350" as="sourcePoint" />
+            <mxPoint x="373" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-18" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="4. grabarDatosJuego">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="473" y="440" as="sourcePoint" />
+            <mxPoint x="663" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="dn8VtfOBq-yE3o-crRei-19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="5. grabarDatosJugador">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="463" y="400" as="sourcePoint" />
+            <mxPoint x="663" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

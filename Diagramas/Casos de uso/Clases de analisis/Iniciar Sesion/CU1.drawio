@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="MZNaAjsOtYNPcF-Wc_aY">
+    <mxGraphModel dx="2357" dy="1520" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-1" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CASO DE USO:&lt;div&gt;Iniciar sesión&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="127" x="429" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Invitado" vertex="1">
+          <mxGeometry height="60" width="30" x="135" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-3" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Inicio de sesión" vertex="1">
+          <mxGeometry height="80" width="100" x="265" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-4" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Gestión usuarios" vertex="1">
+          <mxGeometry height="80" width="70" x="458" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-5" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Usuarios" vertex="1">
+          <mxGeometry height="80" width="80" x="635" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-6" edge="1" parent="1" source="oz7mg67dKnAbzDhD-dpB-2" style="endArrow=none;html=1;rounded=0;" target="oz7mg67dKnAbzDhD-dpB-3" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="405" y="720" as="sourcePoint" />
+            <mxPoint x="455" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-7" edge="1" parent="1" source="oz7mg67dKnAbzDhD-dpB-3" style="endArrow=none;html=1;rounded=0;" target="oz7mg67dKnAbzDhD-dpB-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="465" y="720" as="sourcePoint" />
+            <mxPoint x="565" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-8" edge="1" parent="1" source="oz7mg67dKnAbzDhD-dpB-4" style="endArrow=none;html=1;rounded=0;" target="oz7mg67dKnAbzDhD-dpB-5" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="605" y="720" as="sourcePoint" />
+            <mxPoint x="705" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-9" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="1.iniciarSesion">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="375" y="530" as="sourcePoint" />
+            <mxPoint x="455" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-10" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="2. validarUsuario">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="545" y="530" as="sourcePoint" />
+            <mxPoint x="625" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

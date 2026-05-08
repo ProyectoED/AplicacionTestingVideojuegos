@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="MZNaAjsOtYNPcF-Wc_aY">
+    <mxGraphModel dx="1131" dy="730" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CASO DE USO:&lt;div&gt;Autenticar usuario jugador&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="127" x="429" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-12" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Jugador" vertex="1">
+          <mxGeometry height="60" width="30" x="135" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-13" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Pantalla2FA" vertex="1">
+          <mxGeometry height="80" width="100" x="265" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-14" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Gestión usuarios" vertex="1">
+          <mxGeometry height="80" width="70" x="458" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-15" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Usuarios" vertex="1">
+          <mxGeometry height="80" width="80" x="635" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-16" edge="1" parent="1" source="oz7mg67dKnAbzDhD-dpB-12" style="endArrow=none;html=1;rounded=0;" target="oz7mg67dKnAbzDhD-dpB-13" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="405" y="740" as="sourcePoint" />
+            <mxPoint x="455" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-17" edge="1" parent="1" source="oz7mg67dKnAbzDhD-dpB-13" style="endArrow=none;html=1;rounded=0;" target="oz7mg67dKnAbzDhD-dpB-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="465" y="740" as="sourcePoint" />
+            <mxPoint x="565" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-18" edge="1" parent="1" source="oz7mg67dKnAbzDhD-dpB-14" style="endArrow=none;html=1;rounded=0;" target="oz7mg67dKnAbzDhD-dpB-15" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="605" y="740" as="sourcePoint" />
+            <mxPoint x="705" y="740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="1. ingresarCodigo">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="375" y="550" as="sourcePoint" />
+            <mxPoint x="455" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="oz7mg67dKnAbzDhD-dpB-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="2. verificarCodigo">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="545" y="550" as="sourcePoint" />
+            <mxPoint x="625" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
