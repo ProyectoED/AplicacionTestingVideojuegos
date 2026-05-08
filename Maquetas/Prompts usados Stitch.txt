@@ -1,0 +1,37 @@
+Prompts usados Stitch: 
+
+Queremos diseñar una aplicación que, al pulsar el botón jugar, te cargue un juego aleatorio de una base de datos. La interfaz es la siguiente: 
+En la parte superior puedes encontrar los ultimos juegos que has probado (cuando los juegas los "desbloqueas"). En las playlists un scrolleable tipo ruleta en la cual te permita elegir distintos géneros de videojuego. 
+A la derecha encuentras el mismo tipo de scrolleable, pero esta vez te muestra las estadísticas de tus partidas. 
+
+Las stats del jugador están en burbujas. Haz que se muestren como las playlists, con el titulo arriba y la correspondiente estadística debajo en pequeñito.
+
+Los juegos jugados tienen que ir encima de los minutos jugados y tiene que ser un grid con las carátulas de los videojuegos. 
+Tiene un pequeño texto abajo que muestre la cantidad de juegos jugados en total y un botón para adentrarte en el historial completo
+
+quiero que cambies las playlists y las stats del jugador a este tipo de rueda
+https://www.protopie.io/blog/how-to-create-a-scrolling-wheel-picker-with-3D-Rotate
+
+Las estadísticas quiero que traigas los minutos jugados, etc y que introduzcas encima de las playlists y las stats del jugador otra rueda scrolleable pero en horizontal, con carátulas de videojuegos esta vez
+
+quiero que esté en 1920x1080 y que hagas menos alta la parte de juegos recientes, que sean carátulas cuadradas. Elimina la sección superior de "Last played" 
+
+El botón de jugar se solapa con las playlists y las stats de jugador. Quiero que la sección de recientes sea bastante más pequeña, que solo ocupe la parte superior de la pantalla. Arriba a la izquierda incluye un botón de ajustes. Que la rueda de juegos tenga más separación entre items
+
+que el botón de jugar sea más largo y ocupe, LONGITUDINALMENTE, gran parte del espacio inferior. Que los sectores de playlists y stats jugador también, para que no haya espacio desocupado. Haz más minimalista el aspecto. Que el sector de recientes también ocupe longitudinalmente la pantalla y que sea menos alto todavía
+
+Quiero que el aspecto de la aplicación sea como de cristal, como el Glass iOS. Elimina completamente el sector de Recientes y arregla algunos formatos que se cortan como "Terror" de las playlists. Agranda los rótulos de "Categorías" y "Actividad" y cambialos por "Géneros" y "Estadísticas" respectivamente
+
+Cambia la paleta de colores a un tono de blancos y grises, como el mockup original que te he pasado. Cambia el rótulo de "INICIAR SESIÓN" `por "JUGAR" y quiero que termines de equilibrar los tamaños de los paneles y los textos de dentro. Quiero que lo muestres en resolución de 1920x1080 píxeles
+
+Usa esta paleta de colores y centra más las ruedas de scroll vertical. Que no se corte el texto con la barra de color a su lado. Que el título de géneros y el de estadísticas sean más grandes 
+
+la barra sombreada de la parte inferior de la pantalla quítala y aumenta los títulos H2 de tamaño PORFAVOR. El botón de ajustes arriba izquierda se solapa, así que muevelo 
+
+I want you to upscale the font of the SPANs, the paragraphs and the H2 titles to the size of the H3 paragraphs (TERROR and 42)
+
+Change the right H2 title to "ESTADISTICAS" and move the upper left settings button so it doesn't overlap the playlists section
+
+Move it so the wheel doesn't overlap in a 1920x1080 screen
+
+Upscale the font of both H2 titles ("PLAYLISTS" and "ESTADISTICAS"). Move the settings wheel button to the left so it doesnt overlap on a 1920 x 1080 screen.

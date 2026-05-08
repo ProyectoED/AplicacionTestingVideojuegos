@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lumina Gaming - Sign In</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#5c5f61",
+                      "on-tertiary-fixed": "#171c20",
+                      "surface-variant": "#dce2f7",
+                      "tertiary-fixed-dim": "#c3c7cd",
+                      "secondary-fixed": "#e0e3e6",
+                      "on-secondary-container": "#626567",
+                      "on-primary-container": "#747676",
+                      "outline": "#747878",
+                      "surface-bright": "#f9f9ff",
+                      "on-surface-variant": "#444748",
+                      "inverse-on-surface": "#edf0ff",
+                      "on-surface": "#141b2b",
+                      "tertiary-fixed": "#dfe3e9",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#293040",
+                      "surface-container": "#e9edff",
+                      "on-error-container": "#93000a",
+                      "error-container": "#ffdad6",
+                      "tertiary-container": "#ffffff",
+                      "surface-container-highest": "#dce2f7",
+                      "surface": "#f9f9ff",
+                      "surface-container-low": "#f1f3ff",
+                      "error": "#ba1a1a",
+                      "surface-tint": "#5d5f5f",
+                      "secondary-fixed-dim": "#c4c7ca",
+                      "primary-container": "#ffffff",
+                      "primary-fixed-dim": "#c6c6c7",
+                      "inverse-primary": "#c6c6c7",
+                      "tertiary": "#5a5f64",
+                      "primary-fixed": "#e2e2e2",
+                      "on-tertiary": "#ffffff",
+                      "on-tertiary-container": "#72767c",
+                      "primary": "#5d5f5f",
+                      "background": "#f9f9ff",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#141b2b",
+                      "on-primary-fixed": "#1a1c1c",
+                      "secondary-container": "#e0e3e6",
+                      "on-primary-fixed-variant": "#454747",
+                      "on-primary": "#ffffff",
+                      "surface-dim": "#d3daef",
+                      "on-secondary-fixed-variant": "#44474a",
+                      "on-secondary-fixed": "#191c1e",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#43474c",
+                      "surface-container-high": "#e1e8fd",
+                      "outline-variant": "#c4c7c8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "xs": "0.5rem",
+                      "lg": "2.5rem",
+                      "container-padding": "2rem",
+                      "unit": "4px",
+                      "gutter": "1.5rem",
+                      "md": "1.5rem",
+                      "xl": "4rem",
+                      "sm": "1rem"
+              },
+              "fontFamily": {
+                      "label-sm": ["Plus Jakarta Sans"],
+                      "headline-xl": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Plus Jakarta Sans"],
+                      "body-md": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["28px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+        .glass-input {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.2s ease;
+        }
+        .glass-input:focus {
+            background: rgba(255, 255, 255, 0.5);
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background: radial-gradient(circle at top left, #f1f3ff 0%, #ffffff 40%, #e9edff 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body class="flex flex-col text-on-surface overflow-hidden">
+<main class="relative h-screen w-full flex flex-col items-center justify-center px-container-padding"><button class="fixed top-lg left-lg w-12 h-12 rounded-full glass-panel flex items-center justify-center hover:bg-white/60 transition-all active:scale-95 z-50">
+<span class="material-symbols-outlined text-[24px]">settings</span>
+</button>
+<!-- Background Elements -->
+<div class="fixed top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="fixed bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+<div class="fixed inset-0 -z-20 overflow-hidden opacity-10">
+<img alt="Clean tech background" class="w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFLwqefEqNrkMx03kcauSKSF6nSYusbGx5zEoNEvS2Q5yvUC4QzImSfofbZc776-OpeeV4cuOBXiA3bAk7VLoZI5jQHAJVQ6JxSfuliv7ztpH1Hh_gOiWgGHpyKbLnnZXuYSFmRUCT_Aqdsb51Ot460zJQIZnj39qeYESdu0O6_iieT6jDUGKG_Foo36UtP9qqlgSbhoYsgyOZDDuuA9zYMusSoeq-6xMl9_zNxBVMwY1AR8ZTUGgfx22rwTnPTxU37H4yOta6Fg"/>
+</div>
+<div class="w-full max-w-md flex flex-col gap-lg">
+<!-- Form Section -->
+<div class="flex flex-col gap-md">
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm px-sm text-on-surface-variant">Username or Email</label>
+<input class="glass-input h-14 rounded-full px-lg font-body-md text-on-surface placeholder:text-on-surface-variant/50" placeholder="commander@lumina.io" type="email"/>
+</div>
+<div class="flex flex-col gap-xs">
+<div class="flex flex-col gap-xs">
+<label class="font-label-sm text-label-sm px-sm text-on-surface-variant">Password</label>
+<input class="glass-input h-14 rounded-full px-lg font-body-md text-on-surface placeholder:text-on-surface-variant/50" placeholder="••••••••••••" type="password"/>
+</div>
+<!-- Moved Sign Up text to bottom-left of password section -->
+<div class="flex justify-between items-center px-sm mt-1">
+<p class="font-body-md text-[13px] text-on-surface-variant">
+                            New to the network? 
+                            <button class="font-label-sm text-label-sm text-primary font-bold ml-xs hover:underline">SIGN UP</button>
+</p>
+<button class="font-label-sm text-label-sm text-primary hover:opacity-70 transition-opacity">Forgot Password?</button>
+</div>
+</div>
+</div>
+<!-- Primary Action Button -->
+<button class="glass-panel h-16 rounded-full font-headline-lg text-headline-lg flex items-center justify-center tracking-widest hover:bg-white/60 transition-all active:scale-95 duration-200 bg-white/60 border-white/80 shadow-md">
+                SIGN IN
+            </button>
+<!-- Divider -->
+<div class="flex items-center gap-md px-md">
+<div class="h-[1px] flex-grow bg-white/20"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant/60">OR CONNECT WITH</span>
+<div class="h-[1px] flex-grow bg-white/20"></div>
+</div>
+<!-- Social Logins -->
+<div class="flex flex-col gap-sm">
+<button class="glass-input bg-white/50 border-white/60 h-14 rounded-full flex items-center justify-center gap-sm font-label-sm text-label-sm hover:bg-white/60 transition-colors uppercase tracking-wider shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="google">mail</span>
+                    CONTINUE WITH GOOGLE
+                </button>
+<button class="glass-input bg-white/50 border-white/60 h-14 rounded-full flex items-center justify-center gap-sm font-label-sm text-label-sm hover:bg-white/60 transition-colors uppercase tracking-wider shadow-sm">
+<span class="material-symbols-outlined text-[20px]" data-icon="apple">phone_iphone</span>
+                    CONTINUE WITH APPLE
+                </button>
+<button class="glass-input bg-white/50 border-white/60 h-14 rounded-full flex items-center justify-center gap-sm font-label-sm text-label-sm hover:bg-white/60 transition-colors uppercase tracking-wider shadow-sm">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+    OTHERS
+</button></div>
+</div>
+</main>
+</body></html>
