@@ -9,29 +9,245 @@ Las stats del jugador están en burbujas. Haz que se muestren como las playlists
 Los juegos jugados tienen que ir encima de los minutos jugados y tiene que ser un grid con las carátulas de los videojuegos. 
 Tiene un pequeño texto abajo que muestre la cantidad de juegos jugados en total y un botón para adentrarte en el historial completo
 
+-----
+
 quiero que cambies las playlists y las stats del jugador a este tipo de rueda
 https://www.protopie.io/blog/how-to-create-a-scrolling-wheel-picker-with-3D-Rotate
 
+-----
+
 Las estadísticas quiero que traigas los minutos jugados, etc y que introduzcas encima de las playlists y las stats del jugador otra rueda scrolleable pero en horizontal, con carátulas de videojuegos esta vez
+
+-----
 
 quiero que esté en 1920x1080 y que hagas menos alta la parte de juegos recientes, que sean carátulas cuadradas. Elimina la sección superior de "Last played" 
 
+-----
+
 El botón de jugar se solapa con las playlists y las stats de jugador. Quiero que la sección de recientes sea bastante más pequeña, que solo ocupe la parte superior de la pantalla. Arriba a la izquierda incluye un botón de ajustes. Que la rueda de juegos tenga más separación entre items
+
+-----
 
 que el botón de jugar sea más largo y ocupe, LONGITUDINALMENTE, gran parte del espacio inferior. Que los sectores de playlists y stats jugador también, para que no haya espacio desocupado. Haz más minimalista el aspecto. Que el sector de recientes también ocupe longitudinalmente la pantalla y que sea menos alto todavía
 
+-----
+
 Quiero que el aspecto de la aplicación sea como de cristal, como el Glass iOS. Elimina completamente el sector de Recientes y arregla algunos formatos que se cortan como "Terror" de las playlists. Agranda los rótulos de "Categorías" y "Actividad" y cambialos por "Géneros" y "Estadísticas" respectivamente
+
+-----
 
 Cambia la paleta de colores a un tono de blancos y grises, como el mockup original que te he pasado. Cambia el rótulo de "INICIAR SESIÓN" `por "JUGAR" y quiero que termines de equilibrar los tamaños de los paneles y los textos de dentro. Quiero que lo muestres en resolución de 1920x1080 píxeles
 
+-----
+
 Usa esta paleta de colores y centra más las ruedas de scroll vertical. Que no se corte el texto con la barra de color a su lado. Que el título de géneros y el de estadísticas sean más grandes 
+
+-----
 
 la barra sombreada de la parte inferior de la pantalla quítala y aumenta los títulos H2 de tamaño PORFAVOR. El botón de ajustes arriba izquierda se solapa, así que muevelo 
 
+-----
+
 I want you to upscale the font of the SPANs, the paragraphs and the H2 titles to the size of the H3 paragraphs (TERROR and 42)
+
+-----
 
 Change the right H2 title to "ESTADISTICAS" and move the upper left settings button so it doesn't overlap the playlists section
 
+-----
+
 Move it so the wheel doesn't overlap in a 1920x1080 screen
 
+-----
+
 Upscale the font of both H2 titles ("PLAYLISTS" and "ESTADISTICAS"). Move the settings wheel button to the left so it doesnt overlap on a 1920 x 1080 screen.
+
+-----
+
+Now we're going to create more screens for different options and users.
+
+A guest / unlogged user. Use the same template but replace the playlists and stats with a message that says "log in or create an account to use playlists / log in or create an account to see your stats". The rest keep it the same. 
+
+A developer. Delete the "JUGAR" button and resize the playlists and estadisticas areas. Now, these two are going to be round big buttons. The right one will display a title saying "Acceder a estadísticas"; the left one will say "dar de alta juego". Keep everything else the same.
+
+-----
+
+Why did you change the style for the guest screen? I just told you to stick to this one screen but change ONLY the playlists and estadisticas divs so they're locked
+
+-----
+
+Delete the left divs and leave only "dar de alta juego" and "acceder a estadisticas". Also, make them round and make the bottom stats bar round .
+
+-----
+
+Great. You just have to make both circles bigger and make the bottom bar more bottom. Also make it longer and make the text longer too.
+
+-----
+
+Remove the tob bar and the text, leave only the right buttons and replace the left one with a settings button, just like in the original screen. Make both circles BIGGER and the bottom bar larger please. Also upscale the font and make it a scrollable wheel horizontally
+
+-----
+
+Dont change anything else unless I say so.
+
+Make the bottom bar's edges rounder, like the original "JUGAR" button, and upscale the titles above the numbers. Also make the scrollable fade out on both sides as you scroll. Change the upper left button's container to a round one like the right buttons.
+
+-----
+
+Forget about the fade out thing, just keep it normal. Make the bottom div closer to the bottom of the screen and larger so it's closer to both edges of the screen.
+
+Don't change anything else
+
+-----
+
+Now we're going to make a sign in / sign up screen with the same style. Make every button and write in space a round bar.
+
+-----
+
+Delete the bottom copyright and terms of service texts. Use the previous background and delete the div surrounding the welcome back and the rest of items. Delete the top "lumina gaming" text and the div.
+
+Move the settings button to the upper left corner.
+Delete the welcome back title and the enter your credentials subtext
+
+-----
+
+Delete the blurred top area. Center the login credentials and use the background of the developer mode advanced screen. Dont change anything else
+
+-----
+
+Nice. Keep everything the same and change only those things i say so.
+
+Replace the "continue with nebula" option with a google option and an apple one. Delete the two buttons under it. 
+
+Relocate the "New to the network? SIGN UP" text to the bottom left of the access key credential. Replace the access key title with "Password"
+
+-----
+
+Good. Dont change anything else unless i tell you so.
+
+Add to the top left a settings round icon, like in the Developer screen.
+
+Make the sign in, google and apple buttons more visible. Add another button under the apple one that says "others"
+
+-----
+
+I want you to remake all 4 screens without changing anything that i dont tell you to.
+
+I want you to make them coherent. Use the Developer mode background for all of them and make the fonts and the weights the same for the titles and texts.
+
+Dont change anything else.
+
+-----
+
+I want you to change ONLY the background of this slide to the same background as the developer mode advanced one.
+
+Do not change anything else.
+
+-----
+
+Now do the same with this one. Don't change anything else.
+
+-----
+
+Change only the background to the same as the developer mode advanced. Do not change anything else.
+
+-----
+
+Make an exact copy of this slide but change only the inside of the playlists and estadisticas' divs to display a locked behind log in functions.
+
+-----
+
+Make a 2 factor authentication screen using this one as a blueprint. Don't change anything that is not necessary.
+
+-----
+
+Delete the bottom copyright disclaimers.
+Delete the the top bar and the "Lumina gaming" text.
+Change the background to the log in slide's one. 
+Adjust the two factor authentication number boxes so they fit in their container and make it screen-centered.
+
+Don't change anything else.
+
+-----
+
+Center the two factor div.
+
+Add a question mark round button top right and a settings button top left.
+
+Change the background to the developer screen's one.
+
+Don't change anything else.
+
+-----
+
+You didn't change the background. Change it to the Developer mode slide. 
+
+Make the two factor div centered on the screen in a 1920x1080 scren
+
+-----
+
+Do NOT change anything else.
+
+Translate the texts to spanish. 
+
+-----
+
+Now make a stats screen. Use the same background as this one. Don't change the top buttons. 
+
+Display the cover of numerous games that the developer has alongside with specifical stats of its. When the developer clics one of the covers he can access the full stats of that game. Add a search bar at the top center.
+
+Don't change anything else.
+
+-----
+
+Delete the bottom copyright disclaimers. Delete the top title that says "LUMINA GAMING". Change the user profile button to the user icon. 
+Delete the bottom div that displays monthly revenue and center the games displayed. 
+Make the games a horizontal scrollable wheel. Delete the ACTIVO/MANTENIMIENTO indicator. 
+
+Make the background the same as the developer mode's screen.
+
+Make everything adjusted to a 1920x1080 screen.
+
+DON'T CHANGE ANYTHING ELSE.
+
+-----
+
+Don't change anything unless i say so.
+
+Make everything adjust to a 1920x1080 screen and align the search bar and the "Estadisticas de juegos" to the top center of the screen. 
+
+Center the games wheel to the center of the screen and add a 4th game that fades out, giving the sense of a scrollable wheel.
+
+-----
+
+Nice. Don't change anything else unless i tell you so. 
+
+Make the search bar longer and align it with the "estadisticas de juegos" title. Center the games vertically.
+
+Change the background to the "Developer Mode" 's background.
+
+-----
+
+Put the "Estadisticas de juegos" title above the games and resize the search bar on top to be longer and centered horizontally. Keep it on top of the screen. 
+
+Keep everything else the same, don't change anything else.
+
+-----
+
+Keep everything the same except the search bar. Center it horizontally on the screen and keep it top of the screen. Make it a little longer. Don't change anything else.
+
+-----
+
+Change ONLY the search bar so its centered on a 1920x1080 screen. Just above the Estadisticas de juegos title. Keep everything else the same and make it A LITTLE shorter.
+
+-----
+
+KEEP EVERYTHING ELSE THE SAME. Center the estadisticas de juegos title. Don't change anything else.
+
+Align the search bar with the top buttons.
+
+-----
+
+Center the fucking search bar
+
+-----
