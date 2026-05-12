@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="rHdtZriqE4-BUFgkMjWk">
+    <mxGraphModel dx="866" dy="1426" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-28" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Jugador" vertex="1">
+          <mxGeometry height="60" width="30" x="100" y="493" as="geometry" />
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-29" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Menú&lt;div&gt;principal&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="100" x="200" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-30" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CASO DE USO:&lt;div&gt;Valorar juego&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="127" x="362" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-31" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Gestión juegos" vertex="1">
+          <mxGeometry height="80" width="70" x="401" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-32" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Juegos" vertex="1">
+          <mxGeometry height="80" width="80" x="570" y="483" as="geometry" />
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-33" edge="1" parent="1" source="1HYvyXh6xYIbS7zzMr5u-28" style="endArrow=none;html=1;rounded=0;" target="1HYvyXh6xYIbS7zzMr5u-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="370" y="703" as="sourcePoint" />
+            <mxPoint x="420" y="653" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-34" edge="1" parent="1" source="1HYvyXh6xYIbS7zzMr5u-29" style="endArrow=none;html=1;rounded=0;" target="1HYvyXh6xYIbS7zzMr5u-31" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="340" y="693" as="sourcePoint" />
+            <mxPoint x="390" y="643" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-35" edge="1" parent="1" source="1HYvyXh6xYIbS7zzMr5u-31" style="endArrow=none;html=1;rounded=0;" target="1HYvyXh6xYIbS7zzMr5u-32" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="430" y="683" as="sourcePoint" />
+            <mxPoint x="480" y="633" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-36" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Grabar datos" vertex="1">
+          <mxGeometry height="80" width="70" x="471" y="628" as="geometry" />
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-37" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Estadisticas juego" vertex="1">
+          <mxGeometry height="80" width="80" x="670" y="628" as="geometry" />
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-38" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="1.valorarJuego">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="310" y="513" as="sourcePoint" />
+            <mxPoint x="390" y="513" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-39" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="2.getJuegoJugado">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="480" y="512.13" as="sourcePoint" />
+            <mxPoint x="560" y="512.13" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-40" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="3.grabarDatos">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="440" y="573" as="sourcePoint" />
+            <mxPoint x="470" y="643" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-41" edge="1" parent="1" source="1HYvyXh6xYIbS7zzMr5u-36" style="endArrow=none;html=1;rounded=0;exitX=0.381;exitY=0.155;exitDx=0;exitDy=0;exitPerimeter=0;" target="1HYvyXh6xYIbS7zzMr5u-31" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="390" y="643" as="sourcePoint" />
+            <mxPoint x="440" y="593" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-42" edge="1" parent="1" source="1HYvyXh6xYIbS7zzMr5u-36" style="endArrow=none;html=1;rounded=0;" target="1HYvyXh6xYIbS7zzMr5u-37" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="580" y="803" as="sourcePoint" />
+            <mxPoint x="630" y="753" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="1HYvyXh6xYIbS7zzMr5u-43" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="4.grabarDatosJuego">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="560" y="653" as="sourcePoint" />
+            <mxPoint x="640" y="653" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,70 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="jPLRlrWFu1kkKjpKllAi">
+    <mxGraphModel dx="783" dy="965" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-27" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Invitado&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="30" x="915" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CASO DE USO:&lt;div&gt;Crear cuenta jugador&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="127" x="1222" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-29" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Creación&lt;div&gt;usuarios&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="100" x="1015" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-30" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Gestión usuarios" vertex="1">
+          <mxGeometry height="80" width="70" x="1216" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-31" edge="1" parent="1" source="BWhmElDa3bZR5jMWXg4E-27" style="endArrow=none;html=1;rounded=0;" target="BWhmElDa3bZR5jMWXg4E-29" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1139" y="740" as="sourcePoint" />
+            <mxPoint x="1189" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-32" edge="1" parent="1" source="BWhmElDa3bZR5jMWXg4E-29" style="endArrow=none;html=1;rounded=0;" target="BWhmElDa3bZR5jMWXg4E-30" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1119" y="720" as="sourcePoint" />
+            <mxPoint x="1169" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-33" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Grabar datos" vertex="1">
+          <mxGeometry height="80" width="70" x="1385" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-34" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Usuarios" vertex="1">
+          <mxGeometry height="80" width="80" x="1555" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-35" edge="1" parent="1" source="BWhmElDa3bZR5jMWXg4E-30" style="endArrow=none;html=1;rounded=0;" target="BWhmElDa3bZR5jMWXg4E-33" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1315" y="720" as="sourcePoint" />
+            <mxPoint x="1365" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-36" edge="1" parent="1" source="BWhmElDa3bZR5jMWXg4E-33" style="endArrow=none;html=1;rounded=0;" target="BWhmElDa3bZR5jMWXg4E-34" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="1475" y="710" as="sourcePoint" />
+            <mxPoint x="1525" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-37" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="1. nuevaCuenta">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="1125" y="580" as="sourcePoint" />
+            <mxPoint x="1205" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-38" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="2. nuevaCuentaJugador">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="1295" y="580" as="sourcePoint" />
+            <mxPoint x="1375" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-39" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="3. altaUsuario">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="1465" y="580" as="sourcePoint" />
+            <mxPoint x="1545" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

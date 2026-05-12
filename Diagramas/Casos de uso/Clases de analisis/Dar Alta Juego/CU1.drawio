@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="rHdtZriqE4-BUFgkMjWk">
+    <mxGraphModel dx="1016" dy="1071" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CASO DE USO:&lt;div&gt;Dar de alta juego&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="127" x="362" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-12" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Desarrollador" vertex="1">
+          <mxGeometry height="70" width="40" x="165" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-13" edge="1" parent="1" style="endArrow=none;html=1;rounded=0;" target="iMKUvzN7dcEHqv0IHfSw-14" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="205" y="560" as="sourcePoint" />
+            <mxPoint x="265" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-14" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Interfaz&lt;div&gt;Desarrollador&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="100" x="275" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-15" edge="1" parent="1" source="iMKUvzN7dcEHqv0IHfSw-14" style="endArrow=none;html=1;rounded=0;" target="iMKUvzN7dcEHqv0IHfSw-16" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="385" y="559.5" as="sourcePoint" />
+            <mxPoint x="445" y="559.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-16" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Gestión&lt;div&gt;juegos&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="70" x="455" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-17" edge="1" parent="1" source="iMKUvzN7dcEHqv0IHfSw-16" style="endArrow=none;html=1;rounded=0;" target="iMKUvzN7dcEHqv0IHfSw-18" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="538.5" y="559.5" as="sourcePoint" />
+            <mxPoint x="598.5" y="559.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-18" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Juegos" vertex="1">
+          <mxGeometry height="80" width="80" x="605" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-19" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="1.crearJuego">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="385" y="550" as="sourcePoint" />
+            <mxPoint x="455" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="iMKUvzN7dcEHqv0IHfSw-20" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="2. altaJuego">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="534" y="550" as="sourcePoint" />
+            <mxPoint x="604" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

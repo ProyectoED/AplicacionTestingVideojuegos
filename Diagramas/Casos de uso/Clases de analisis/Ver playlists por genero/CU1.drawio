@@ -1,0 +1,62 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="jPLRlrWFu1kkKjpKllAi">
+    <mxGraphModel dx="-394" dy="-328" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-52" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Jugador" vertex="1">
+          <mxGeometry height="60" width="30" x="1835" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-53" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CASO DE USO:&lt;div&gt;Ver playlist por género&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="127" x="2062" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-54" parent="1" style="shape=umlBoundary;whiteSpace=wrap;html=1;" value="Menú principal" vertex="1">
+          <mxGeometry height="80" width="100" x="1965" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-55" parent="1" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" value="Gestión juegos" vertex="1">
+          <mxGeometry height="80" width="70" x="2158" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-56" parent="1" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" value="Juegos" vertex="1">
+          <mxGeometry height="80" width="80" x="2335" y="1600" as="geometry" />
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-57" edge="1" parent="1" source="BWhmElDa3bZR5jMWXg4E-52" style="endArrow=none;html=1;rounded=0;" target="BWhmElDa3bZR5jMWXg4E-54" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2106" y="1790" as="sourcePoint" />
+            <mxPoint x="2156" y="1740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-58" edge="1" parent="1" source="BWhmElDa3bZR5jMWXg4E-54" style="endArrow=none;html=1;rounded=0;" target="BWhmElDa3bZR5jMWXg4E-55" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2186" y="1820" as="sourcePoint" />
+            <mxPoint x="2286" y="1820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-59" edge="1" parent="1" source="BWhmElDa3bZR5jMWXg4E-55" style="endArrow=none;html=1;rounded=0;" target="BWhmElDa3bZR5jMWXg4E-56" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="2266" y="1740" as="sourcePoint" />
+            <mxPoint x="2366" y="1740" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-60" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="1.seleccionarJuego">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="2078" y="1629.4299999999998" as="sourcePoint" />
+            <mxPoint x="2158" y="1629.4299999999998" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-61" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="2.busqAleatoria">
+          <mxGeometry relative="1" width="80" as="geometry">
+            <mxPoint x="2246" y="1629.0900000000001" as="sourcePoint" />
+            <mxPoint x="2326" y="1629.0900000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="BWhmElDa3bZR5jMWXg4E-62" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" value="3.mostrarPlaylist">
+          <mxGeometry relative="1" width="80" x="-0.1034" y="30" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="2148.5" y="1650" as="sourcePoint" />
+            <mxPoint x="2076" y="1650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
