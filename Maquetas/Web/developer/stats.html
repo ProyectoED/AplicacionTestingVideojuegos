@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Lumina Gaming - Dashboard de Estadísticas</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#44474a",
+                        "primary": "#5d5f5f",
+                        "surface-container-low": "#f1f3ff",
+                        "tertiary-container": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#dce2f7",
+                        "on-primary-fixed-variant": "#454747",
+                        "primary-container": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e1e8fd",
+                        "surface-variant": "#dce2f7",
+                        "tertiary": "#5a5f64",
+                        "on-primary-fixed": "#1a1c1c",
+                        "secondary-container": "#e0e3e6",
+                        "inverse-on-surface": "#edf0ff",
+                        "on-surface": "#141b2b",
+                        "on-primary-container": "#747676",
+                        "on-tertiary-container": "#72767c",
+                        "primary-fixed": "#e2e2e2",
+                        "on-primary": "#ffffff",
+                        "on-background": "#141b2b",
+                        "tertiary-fixed": "#dfe3e9",
+                        "secondary": "#5c5f61",
+                        "inverse-primary": "#c6c6c7",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#43474c",
+                        "surface-dim": "#d3daef",
+                        "surface-container": "#e9edff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#5d5f5f",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e0e3e6",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#293040",
+                        "on-secondary-container": "#626567",
+                        "surface-bright": "#f9f9ff",
+                        "outline": "#747878",
+                        "tertiary-fixed-dim": "#c3c7cd",
+                        "background": "#f9f9ff",
+                        "outline-variant": "#c4c7c8",
+                        "on-surface-variant": "#444748",
+                        "on-tertiary-fixed": "#171c20",
+                        "on-secondary-fixed": "#191c1e",
+                        "surface": "#f9f9ff",
+                        "secondary-fixed-dim": "#c4c7ca"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "0.5rem",
+                        "xl": "4rem",
+                        "gutter": "1.5rem",
+                        "sm": "1rem",
+                        "md": "1.5rem",
+                        "lg": "2.5rem",
+                        "container-padding": "2rem",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["28px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-xl": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #f9f9ff 0%, #e9edff 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .glass-input {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body class="text-on-surface flex flex-col min-h-screen"
+    style="background: radial-gradient(circle at top left, #f1f3ff 0%, #ffffff 40%, #e9edff 100%); min-height: 100vh;">
+    <!-- Top Navigation Bar -->
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-container-padding py-md backdrop-blur-xl border-b border-white/20 bg-white/10">
+        <div class="flex items-center gap-md">
+            <button
+                class="w-12 h-12 flex items-center justify-center rounded-full glass-panel hover:bg-white/40 transition-colors duration-200">
+                <span class="material-symbols-outlined text-on-surface" data-icon="settings">settings</span>
+            </button>
+        </div>
+        <div class="absolute left-1/2 -translate-x-1/2 w-full max-w-xl px-4 flex justify-center">
+            <div class="relative w-full">
+                <span
+                    class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant opacity-60"
+                    data-icon="search">search</span>
+                <input
+                    class="w-full h-10 pl-12 pr-4 rounded-full glass-input focus:ring-0 focus:outline-none text-body-md font-body-md placeholder-on-surface-variant/50"
+                    placeholder="Buscar juegos..." type="text">
+            </div>
+        </div>
+        <!-- Search Bar -->
+        <div class="flex items-center gap-md">
+            <button
+                class="w-12 h-12 flex items-center justify-center rounded-full glass-panel hover:bg-white/40 transition-colors duration-200">
+                <span class="material-symbols-outlined text-on-surface" data-icon="notifications">notifications</span>
+            </button>
+            <button
+                class="w-12 h-12 flex items-center justify-center rounded-full glass-panel hover:bg-white/40 transition-colors duration-200 overflow-hidden">
+                <span class="material-symbols-outlined text-on-surface" data-icon="person">person</span>
+            </button>
+        </div>
+    </header>
+    <!-- Main Content Canvas -->
+    <main class="flex flex-col min-h-screen justify-center items-center relative overflow-hidden">
+        <div class="w-full px-container-padding flex flex-col justify-center min-h-[calc(100vh-80px)]">
+            <!-- Welcome Section -->
+            <section class="w-full text-center z-10 mb-md flex flex-col items-center">
+                <h1 class="text-headline-xl font-headline-xl text-on-surface mb-xs">Estadísticas de Juegos</h1>
+                <p class="text-body-md font-body-md text-on-surface-variant"><br></p>
+            </section>
+            <!-- Horizontal Scrollable Wheel / Carousel -->
+            <div class="relative w-full overflow-hidden py-md">
+                <div class="flex overflow-x-auto hide-scrollbar snap-x snap-mandatory gap-lg pb-8 px-4 justify-center">
+                    <!-- Game Card 1 -->
+                    <div
+                        class="flex-none w-[400px] snap-center glass-panel rounded-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-[1.02]">
+                        <div class="h-56 relative overflow-hidden">
+                            <img alt="Cyber Nexus"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUUFb1QTzIAnQFu9cXt8VSQdv2aNGVt5nUzJDpHn3g3hZ0HS36iyqlpscL8v23xqKNLlHeWSNhL5egCV0laB-P7s81XzqRgUMp6dQUCFmi_ylt4gUE7-jkAkliUqTBvkAUyJrB9k71CpMYyezzW3w8JhIjBO1lHF-k9UinOcIkNSbnmQID6EPJP07HHgrTHPzOdWBIJw8ho2AdpXwhwPRTw8avsbk5-a4szjiX0GfbHgx4rkXblzWtPGAx2wr1K9oKhEmd_Oc5og">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                        <div class="p-md">
+                            <h3 class="text-headline-lg font-headline-lg mb-md">The First of Them</h3>
+                            <div class="grid grid-cols-3 gap-sm">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">MEDIA
+                                        MIN JUGADOS</span>
+                                    <span class="text-body-md font-bold">20&nbsp;</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Total
+                                        JUGADORES</span>
+                                    <span class="text-body-md font-bold">326</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">porcentaje
+                                        compleción</span>
+                                    <span class="text-body-md font-bold">20%</span>
+                                </div>
+                            </div>
+                            <div class="mt-md pt-md border-t border-white/20 flex justify-between items-center">
+                                <span class="text-label-sm font-label-sm text-primary font-bold">VER DETALLES</span>
+                                <span class="material-symbols-outlined text-primary"
+                                    data-icon="arrow_forward">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Game Card 2 -->
+                    <div
+                        class="flex-none w-[400px] snap-center glass-panel rounded-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-[1.02]">
+                        <div class="h-56 relative overflow-hidden">
+                            <img alt="Ethereal Sands"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqWiaFOSl9gp9ioDl2RiXzVPI_BKeSZKZpcSBpVl7MEmv8XxsotXUuhRi_iBHrxVjoG4EfI_9JO4EDjo34M3HzL7EUUKie6fWFkGiUDRoI2nxFVPeZKGb8yBSY32vCB_gIm8_WTO1uvu-LiUcE41a2FRbrb8NPjb-fEkhyf2_BkPDrrTc5XD2Zi-LkLRYUbprDjeAaSXx2WplY9b6hOi2me-qF9UO81OMRPdAaaMihpwT6YK_53P6Bi3t3568LkOdNWSadp4UNRw">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                        <div class="p-md">
+                            <h3 class="text-headline-lg font-headline-lg mb-md">T.R.A.V.E.L.</h3>
+                            <div class="grid grid-cols-3 gap-sm">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">MEDIA
+                                        MIN JUGADOS</span>
+                                    <span class="text-body-md font-bold">43</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Total
+                                        Jugadores</span>
+                                    <span class="text-body-md font-bold">27</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">PORCENTAJE
+                                        COMPLECIÓN</span>
+                                    <span class="text-body-md font-bold">67%</span>
+                                </div>
+                            </div>
+                            <div class="mt-md pt-md border-t border-white/20 flex justify-between items-center">
+                                <span class="text-label-sm font-label-sm text-primary font-bold">VER DETALLES</span>
+                                <span class="material-symbols-outlined text-primary"
+                                    data-icon="arrow_forward">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Game Card 3 -->
+                    <div
+                        class="flex-none w-[400px] snap-center glass-panel rounded-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-[1.02]">
+                        <div class="h-56 relative overflow-hidden">
+                            <img alt="Neon Drift"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDveeYPUwOBt4L4rH4qyH781iXKPCeL-DA4slr4Gae9hILrOuWYd6MzliOZtXnY0EM8rXgllyUuKioG3hK0VmPD8IxrPCxCRrnU1XaaZuJZtZCArFEb6a2FRBWvYCBW1QZR79V0F5lhrMFRezmESthgO-SgkN2xcNEXFiDP3T0pBq4r0jL1NrxhH5eEzK-q_7CB9UIzr9JJW5v3PdjWHAlenJZslgn1R0Tl2kSkMsgvOdqj_Tm9QsppTH6K_-d1XF_1TShc_WF26g">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                        <div class="p-md">
+                            <h3 class="text-headline-lg font-headline-lg mb-md">Crave for Velocity</h3>
+                            <div class="grid grid-cols-3 gap-sm">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">MEDIA
+                                        MIN JUGADOS</span>
+                                    <span class="text-body-md font-bold">200</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Total
+                                        Jugadores</span>
+                                    <span class="text-body-md font-bold">3</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">PORCENTAJE
+                                        COMPLECIÓN</span>
+                                    <span class="text-body-md font-bold">100%</span>
+                                </div>
+                            </div>
+                            <div class="mt-md pt-md border-t border-white/20 flex justify-between items-center">
+                                <span class="text-label-sm font-label-sm text-primary font-bold">VER DETALLES</span>
+                                <span class="material-symbols-outlined text-primary"
+                                    data-icon="arrow_forward">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Spacing card for centering feel -->
+                    <div class="flex-none w-[400px] snap-center glass-panel rounded-xl overflow-hidden cursor-pointer group transition-all duration-300 hover:scale-[1.02] opacity-40"
+                        style="mask-image: linear-gradient(to right, black 0%, transparent 100%); -webkit-mask-image: linear-gradient(to right, black 0%, transparent 100%);">
+                        <div class="h-56 relative overflow-hidden">
+                            <img alt="Star Voyager"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUUFb1QTzIAnQFu9cXt8VSQdv2aNGVt5nUzJDpHn3g3hZ0HS36iyqlpscL8v23xqKNLlHeWSNhL5egCV0laB-P7s81XzqRgUMp6dQUCFmi_ylt4gUE7-jkAkliUqTBvkAUyJrB9k71CpMYyezzW3w8JhIjBO1lHF-k9UinOcIkNSbnmQID6EPJP07HHgrTHPzOdWBIJw8ho2AdpXwhwPRTw8avsbk5-a4szjiX0GfbHgx4rkXblzWtPGAx2wr1K9oKhEmd_Oc5og">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                        </div>
+                        <div class="p-md">
+                            <h3 class="text-headline-lg font-headline-lg mb-md">Project Tomboy</h3>
+                            <div class="grid grid-cols-3 gap-sm">
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">MEDIA
+                                        MIN JUGADOS</span>
+                                    <span class="text-body-md font-bold">5 mil</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">Total
+                                        Jugadores</span>
+                                    <span class="text-body-md font-bold">1214</span>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span
+                                        class="text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wider mb-1">porcentaje
+                                        compleción</span>
+                                    <span class="text-body-md font-bold">23%</span>
+                                </div>
+                            </div>
+                            <div class="mt-md pt-md border-t border-white/20 flex justify-between items-center">
+                                <span class="text-label-sm font-label-sm text-primary font-bold">VER DETALLES</span>
+                                <span class="material-symbols-outlined text-primary"
+                                    data-icon="arrow_forward">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-none w-[1px]"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div
+        class="fixed top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+    <div
+        class="fixed bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+    <div class="fixed inset-0 -z-20 overflow-hidden opacity-10"><img alt="Clean tech background"
+            class="w-full h-full object-cover grayscale"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFLwqefEqNrkMx03kcauSKSF6nSYusbGx5zEoNEvS2Q5yvUC4QzImSfofbZc776-OpeeV4cuOBXiA3bAk7VLoZI5jQHAJVQ6JxSfuliv7ztpH1Hh_gOiWgGHpyKbLnnZXuYSFmRUCT_Aqdsb51Ot460zJQIZnj39qeYESdu0O6_iieT6jDUGKG_Foo36UtP9qqlgSbhoYsgyOZDDuuA9zYMusSoeq-6xMl9_zNxBVMwY1AR8ZTUGgfx22rwTnPTxU37H4yOta6Fg">
+    </div>
+
+
+</body>
+
+</html>

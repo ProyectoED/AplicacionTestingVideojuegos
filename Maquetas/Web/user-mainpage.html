@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&amp;family=Space+Grotesk:wght@600&amp;family=Be+Vietnam+Pro:wght@400&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+
+        .glass-ios {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+        }
+
+        .bg-mesh {
+            background: radial-gradient(circle at top left, #f1f3ff 0%, #ffffff 40%, #e9edff 100%);
+            position: relative;
+        }
+
+        .wheel-container {
+            perspective: 2000px;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            overflow: visible;
+            mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+        }
+
+        .wheel-viewport {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .wheel-item {
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            top: -40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            transition: opacity 0.4s, transform 0.4s;
+            text-align: center;
+        }
+
+        .item-prev-2 {
+            transform: rotateX(45deg) translateZ(50px) translateY(-160px) scale(0.7);
+            opacity: 0.15;
+        }
+
+        .item-prev-1 {
+            transform: rotateX(25deg) translateZ(100px) translateY(-80px) scale(0.85);
+            opacity: 0.4;
+        }
+
+        .item-active {
+            transform: rotateX(0deg) translateZ(150px) scale(1.1);
+            opacity: 1;
+        }
+
+        .item-next-1 {
+            transform: rotateX(-25deg) translateZ(100px) translateY(80px) scale(0.85);
+            opacity: 0.4;
+        }
+
+        .item-next-2 {
+            transform: rotateX(-45deg) translateZ(50px) translateY(160px) scale(0.7);
+            opacity: 0.15;
+        }
+
+        .active-indicator {
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 80px;
+            background: #ffffff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            z-index: 10;
+            border-radius: 99px;
+        }
+
+        .minimal-btn {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .minimal-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.05);
+        }
+    </style>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#475569",
+                        "secondary": "#64748b",
+                        "background": "#e2e8f0",
+                        "on-background": "#334155",
+                        "surface": "#ffffff",
+                        "on-surface": "#1e293b",
+                        "on-surface-variant": "#475569",
+                        "outline": "#cbd5e1"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1.5rem",
+                        "lg": "3rem",
+                        "xl": "4rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "container-padding": "64px",
+                        "card-inner-padding": "60px",
+                        "gutter": "48px"
+                    },
+                    "fontFamily": {
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "label-caps": ["Space Grotesk"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "display-xl": ["72px", { "lineHeight": "1", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+                        "label-caps": ["22px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-lg": ["40px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                        "body-md": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+
+        .glass-ios {
+            background: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.05);
+        }
+
+        .bg-mesh {
+            background: radial-gradient(circle at top left, #f1f3ff 0%, #ffffff 40%, #e9edff 100%);
+            position: relative;
+        }
+
+        .wheel-container {
+            perspective: 2000px;
+            height: 100%;
+            width: 100%;
+            position: relative;
+            overflow: visible;
+            mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+        }
+
+        .wheel-viewport {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .wheel-item {
+            position: absolute;
+            width: 100%;
+            height: 80px;
+            top: -40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backface-visibility: hidden;
+            transition: opacity 0.4s, transform 0.4s;
+            text-align: center;
+        }
+
+        .item-prev-2 {
+            transform: rotateX(45deg) translateZ(50px) translateY(-160px) scale(0.7);
+            opacity: 0.15;
+        }
+
+        .item-prev-1 {
+            transform: rotateX(25deg) translateZ(100px) translateY(-80px) scale(0.85);
+            opacity: 0.4;
+        }
+
+        .item-active {
+            transform: rotateX(0deg) translateZ(150px) scale(1.1);
+            opacity: 1;
+        }
+
+        .item-next-1 {
+            transform: rotateX(-25deg) translateZ(100px) translateY(80px) scale(0.85);
+            opacity: 0.4;
+        }
+
+        .item-next-2 {
+            transform: rotateX(-45deg) translateZ(50px) translateY(160px) scale(0.7);
+            opacity: 0.15;
+        }
+
+        .active-indicator {
+            position: absolute;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 80px;
+            background: #ffffff;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            z-index: 10;
+            border-radius: 99px;
+        }
+
+        .minimal-btn {
+            background: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(15px);
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .minimal-btn:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-mesh min-h-screen text-on-surface selection:bg-white/30 selection:text-white overflow-hidden flex flex-col items-center">
+    <!-- Repositioned Settings Button with generous padding -->
+    <div class="fixed top-8 z-[60] left-4">
+        <button class="w-14 h-14 rounded-full minimal-btn flex items-center justify-center text-on-surface/70">
+            <span class="material-symbols-outlined text-2xl">settings</span>
+        </button>
+    </div>
+    <main class="w-full h-screen flex flex-col justify-between py-12 px-container-padding max-w-[1920px]">
+        <!-- Main Content Area - Balanced Panels -->
+        <div class="flex-grow flex gap-gutter items-stretch mb-12">
+            <!-- Genres -->
+            <section class="flex-1 glass-ios rounded-xl p-card-inner-padding flex flex-col relative overflow-hidden">
+                <div class="flex flex-col items-center gap-2 mb-12 relative z-20">
+                    <h2
+                        class="font-label-caps text-on-surface uppercase tracking-widest text-center text-3xl font-black">
+                        Playlists</h2>
+                    <div class="h-1 w-12 bg-on-surface/10 rounded-full"></div>
+                </div>
+                <div class="relative flex-grow flex items-center justify-center">
+                    <div class="active-indicator opacity-50"></div>
+                    <div class="wheel-container">
+                        <div class="wheel-viewport">
+                            <div class="wheel-item item-prev-2">
+                                <h3 class="font-display-xl text-4xl text-on-surface/20">ACCIÓN</h3>
+                            </div>
+                            <div class="wheel-item item-prev-1">
+                                <h3 class="font-display-xl text-4xl text-on-surface/40">AVENTURAS</h3>
+                            </div>
+                            <div class="wheel-item item-active">
+                                <div class="flex flex-col items-center px-16">
+                                    <h3
+                                        class="font-display-xl text-7xl text-on-surface drop-shadow-sm whitespace-nowrap">
+                                        TERROR</h3>
+                                    <p
+                                        class="font-label-caps text-[14px] text-on-surface/60 mt-4 font-bold tracking-widest">
+                                        12 TÍTULOS DISPONIBLES</p>
+                                </div>
+                            </div>
+                            <div class="wheel-item item-next-1">
+                                <h3 class="font-display-xl text-4xl text-on-surface/40">PUZZLES</h3>
+                            </div>
+                            <div class="wheel-item item-next-2">
+                                <h3 class="font-display-xl text-4xl text-on-surface/20">RPG</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Stats -->
+            <section class="flex-1 glass-ios rounded-xl p-card-inner-padding flex flex-col relative overflow-hidden">
+                <div class="flex flex-col items-center gap-2 mb-12 relative z-20">
+                    <h2
+                        class="font-label-caps text-on-surface uppercase tracking-widest text-center text-3xl font-black">
+                        ESTADÍSTICAS</h2>
+                    <div class="h-1 w-12 bg-on-surface/10 rounded-full"></div>
+                </div>
+                <div class="relative flex-grow flex items-center justify-center">
+                    <div class="active-indicator opacity-50"></div>
+                    <div class="wheel-container">
+                        <div class="wheel-viewport">
+                            <div class="wheel-item item-prev-2">
+                                <div class="flex flex-col items-center">
+                                    <span class="font-label-caps text-[12px] text-on-surface/30">LOGROS</span>
+                                    <span class="font-display-xl text-4xl text-on-surface/20">142</span>
+                                </div>
+                            </div>
+                            <div class="wheel-item item-prev-1">
+                                <div class="flex flex-col items-center">
+                                    <span class="font-label-caps text-[12px] text-on-surface/30">TASA ÉXITO</span>
+                                    <span class="font-display-xl text-4xl text-on-surface/40">85%</span>
+                                </div>
+                            </div>
+                            <div class="wheel-item item-active">
+                                <div class="flex flex-col items-center px-16">
+                                    <h3
+                                        class="font-display-xl text-7xl text-on-surface drop-shadow-sm whitespace-nowrap">
+                                        42</h3>
+                                    <p
+                                        class="font-label-caps text-[14px] text-on-surface/60 mt-4 font-bold tracking-widest uppercase">
+                                        Juegos Jugados</p>
+                                </div>
+                            </div>
+                            <div class="wheel-item item-next-1">
+                                <div class="flex flex-col items-center">
+                                    <span class="font-label-caps text-[12px] text-on-surface/30">TIEMPO</span>
+                                    <span class="font-display-xl text-4xl text-on-surface/40">8,420m</span>
+                                </div>
+                            </div>
+                            <div class="wheel-item item-next-2">
+                                <div class="flex flex-col items-center">
+                                    <span class="font-label-caps text-[12px] text-on-surface/30">AMIGOS</span>
+                                    <span class="font-display-xl text-4xl text-on-surface/20">12 ON</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Bottom Action -->
+        <div class="w-full flex justify-center">
+            <button
+                class="w-full py-12 rounded-full glass-ios flex items-center justify-center gap-10 hover:bg-white/60 transition-all group relative border-2 border-white/90">
+                <span
+                    class="font-display-xl text-5xl tracking-[0.6em] uppercase text-on-surface/80 font-black">Jugar</span>
+            </button>
+        </div>
+    </main>
+    <div
+        class="fixed top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+    <div
+        class="fixed bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+    <script>
+        // Disable scroll interference
+        document.querySelectorAll('.wheel-container').forEach(container => {
+            container.addEventListener('wheel', (e) => {
+                e.preventDefault();
+            }, { passive: false });
+        });
+    </script>
+
+    <div class="fixed inset-0 -z-20 overflow-hidden opacity-10"><img alt="Clean tech background"
+            class="w-full h-full object-cover grayscale"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFLwqefEqNrkMx03kcauSKSF6nSYusbGx5zEoNEvS2Q5yvUC4QzImSfofbZc776-OpeeV4cuOBXiA3bAk7VLoZI5jQHAJVQ6JxSfuliv7ztpH1Hh_gOiWgGHpyKbLnnZXuYSFmRUCT_Aqdsb51Ot460zJQIZnj39qeYESdu0O6_iieT6jDUGKG_Foo36UtP9qqlgSbhoYsgyOZDDuuA9zYMusSoeq-6xMl9_zNxBVMwY1AR8ZTUGgfx22rwTnPTxU37H4yOta6Fg">
+    </div>
+</body>
+
+</html>

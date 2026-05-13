@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>2FA - Lumina Gaming</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#e0e3e6",
+                        "on-primary": "#ffffff",
+                        "secondary": "#5c5f61",
+                        "on-background": "#141b2b",
+                        "surface-bright": "#f9f9ff",
+                        "on-secondary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#1a1c1c",
+                        "inverse-surface": "#293040",
+                        "surface-tint": "#5d5f5f",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e1e8fd",
+                        "primary": "#5d5f5f",
+                        "on-tertiary-container": "#72767c",
+                        "on-primary-fixed-variant": "#454747",
+                        "surface-container-low": "#f1f3ff",
+                        "surface-container": "#e9edff",
+                        "surface-container-highest": "#dce2f7",
+                        "outline-variant": "#c4c7c8",
+                        "primary-container": "#ffffff",
+                        "on-tertiary-fixed": "#171c20",
+                        "primary-fixed": "#e2e2e2",
+                        "outline": "#747878",
+                        "on-error": "#ffffff",
+                        "on-surface": "#141b2b",
+                        "on-primary-container": "#747676",
+                        "tertiary-fixed-dim": "#c3c7cd",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-secondary-fixed": "#191c1e",
+                        "inverse-primary": "#c6c6c7",
+                        "tertiary": "#5a5f64",
+                        "surface-variant": "#dce2f7",
+                        "secondary-fixed-dim": "#c4c7ca",
+                        "surface": "#f9f9ff",
+                        "surface-dim": "#d3daef",
+                        "on-surface-variant": "#444748",
+                        "tertiary-fixed": "#dfe3e9",
+                        "on-secondary-container": "#626567",
+                        "on-tertiary-fixed-variant": "#43474c",
+                        "background": "#f9f9ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#44474a",
+                        "error": "#ba1a1a",
+                        "inverse-on-surface": "#edf0ff",
+                        "secondary-fixed": "#e0e3e6",
+                        "tertiary-container": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "xs": "0.5rem",
+                        "lg": "2.5rem",
+                        "xl": "4rem",
+                        "unit": "4px",
+                        "gutter": "1.5rem",
+                        "sm": "1rem",
+                        "md": "1.5rem",
+                        "container-padding": "2rem"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-sm": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["28px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at top left, #f1f3ff 0%, #ffffff 40%, #e9edff 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .glass-input {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+            transition: all 0.2s ease;
+        }
+
+        .glass-input:focus {
+            background: rgba(255, 255, 255, 0.6);
+            border-color: rgba(255, 255, 255, 0.8);
+            outline: none;
+            box-shadow: 0 0 0 4px rgba(93, 95, 95, 0.05);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .btn-jugar {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            letter-spacing: 0.15em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-jugar:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-jugar:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+
+<body
+    class="font-body-md text-on-background antialiased flex items-center justify-center min-h-screen relative mx-auto overflow-hidden">
+    <!-- Background Decorative Elements from SCREEN_21 -->
+    <div
+        class="fixed top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+    <div
+        class="fixed bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-secondary/5 rounded-full blur-[120px] pointer-events-none -z-10">
+    </div>
+    <!-- Background Texture from SCREEN_21 -->
+    <div class="fixed inset-0 -z-20 overflow-hidden opacity-10">
+        <img alt="Clean tech background" class="w-full h-full object-cover grayscale"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFLwqefEqNrkMx03kcauSKSF6nSYusbGx5zEoNEvS2Q5yvUC4QzImSfofbZc776-OpeeV4cuOBXiA3bAk7VLoZI5jQHAJVQ6JxSfuliv7ztpH1Hh_gOiWgGHpyKbLnnZXuYSFmRUCT_Aqdsb51Ot460zJQIZnj39qeYESdu0O6_iieT6jDUGKG_Foo36UtP9qqlgSbhoYsgyOZDDuuA9zYMusSoeq-6xMl9_zNxBVMwY1AR8ZTUGgfx22rwTnPTxU37H4yOta6Fg">
+    </div>
+    <!-- Floating Top Navigation Buttons -->
+    <div class="fixed top-8 left-8 z-50">
+        <button
+            class="w-12 h-12 glass-panel rounded-full flex items-center justify-center text-primary hover:bg-white/60 transition-all duration-300">
+            <span class="material-symbols-outlined text-[24px]">settings</span>
+        </button>
+    </div>
+    <div class="fixed top-8 right-8 z-50">
+        <button
+            class="w-12 h-12 glass-panel rounded-full flex items-center justify-center text-primary hover:bg-white/60 transition-all duration-300">
+            <span class="material-symbols-outlined text-[24px]">help</span>
+        </button>
+    </div>
+    <!-- Main Content Canvas -->
+    <main class="flex items-center justify-center w-full h-full">
+        <div class="w-full max-w-lg glass-panel rounded-[2.5rem] p-lg md:p-xl flex flex-col items-center text-center">
+            <!-- Icon / Brand Header -->
+            <div class="mb-lg">
+                <div class="w-20 h-20 rounded-full glass-panel flex items-center justify-center mb-md mx-auto">
+                    <span class="material-symbols-outlined text-[40px] text-primary"
+                        data-icon="verified_user">verified_user</span>
+                </div>
+                <h1 class="font-headline-xl text-headline-xl text-on-surface mb-xs">Autenticación en dos pasos</h1>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Introduce el código de 6 dígitos
+                    enviado a tu correo o aplicación de autenticación.</p>
+            </div>
+            <!-- OTP Input Fields -->
+            <form class="w-full space-y-xl">
+                <div class="flex justify-center gap-2 sm:gap-4">
+                    <input autofocus=""
+                        class="glass-input w-12 h-16 md:w-16 md:h-20 rounded-xl text-center text-headline-lg font-bold text-on-surface"
+                        maxlength="1" type="text">
+                    <input
+                        class="glass-input w-12 h-16 md:w-16 md:h-20 rounded-xl text-center text-headline-lg font-bold text-on-surface"
+                        maxlength="1" type="text">
+                    <input
+                        class="glass-input w-12 h-16 md:w-16 md:h-20 rounded-xl text-center text-headline-lg font-bold text-on-surface"
+                        maxlength="1" type="text">
+                    <input
+                        class="glass-input w-12 h-16 md:w-16 md:h-20 rounded-xl text-center text-headline-lg font-bold text-on-surface"
+                        maxlength="1" type="text">
+                    <input
+                        class="glass-input w-12 h-16 md:w-16 md:h-20 rounded-xl text-center text-headline-lg font-bold text-on-surface"
+                        maxlength="1" type="text">
+                    <input
+                        class="glass-input w-12 h-16 md:w-16 md:h-20 rounded-xl text-center text-headline-lg font-bold text-on-surface"
+                        maxlength="1" type="text">
+                </div>
+                <!-- Action Button -->
+                <button
+                    class="btn-jugar w-full py-md rounded-full font-label-sm text-label-sm font-bold text-primary flex items-center justify-center gap-sm"
+                    type="submit"
+                    onclick="window.location.href='../user-mainpage.html'; return false;">VERIFICAR<span class="material-symbols-outlined"
+                        data-icon="chevron_right">chevron_right</span></button>
+            </form>
+            <!-- Secondary Actions -->
+            <div class="mt-lg flex flex-col gap-sm">
+                <button
+                    class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">Reenviar
+                    código</button>
+                <div class="w-8 h-[1px] bg-white/20 mx-auto"></div>
+                <button
+                    class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center gap-xs"><span
+                        class="material-symbols-outlined text-[16px]" data-icon="devices">devices</span>Probar de otra
+                    forma</button>
+            </div>
+        </div>
+    </main>
+
+
+</body>
+
+</html>
